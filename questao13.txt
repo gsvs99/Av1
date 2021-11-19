@@ -1,0 +1,40 @@
+Código:
+
+#include <stdio.h>
+
+float OrdenarFloat(float *v, int n, int *p) {
+   float vetor_ordenado = v[0];
+   *p = 0;
+
+   int i;
+   for (i = 1; i <= n; i++)
+      if (v[i] < vetor_ordenado) {
+         vetor_ordenado = v[i];
+         *p = i;
+      }
+
+   return(vetor_ordenado);
+}
+
+int main() {
+   int n;
+   scanf("Digite o numero de elementos a ordenar: %d", n);
+   float entradas[n], aux;
+   int pt;
+   int i = 0;
+   while (i<n){
+     
+     entradas[i] = scanf("%f", aux);
+     i = i + 1;
+
+   }
+   float m = OrdenarFloat(entradas, n, &pt);
+
+   printf("resultado %d\n", n, pt);
+
+   m = OrdenarFloat(entradas, n, &pt);
+   printf("teste %d", n, pt);
+}
+
+
+Comentário: Não consegui implementar, me atrapalhei usando ponteiros, troquei nomenclatura das coisas, me enrolei. Isso acabou me travando pras proximas duas questões também.

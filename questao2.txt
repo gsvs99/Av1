@@ -1,0 +1,4 @@
+Questão 2)
+Resposta: Teremos como saída, nessa sequência: Endereço da variável(4094), conteúdo da váriavél apontado pelo ponteiro somado com 2 (5 + 2 = 7), 
+O conteúdo da variável "i" (5), 3 multiplicando o conteúdo da variável apontada pelo ponteiro (3 x 5 = 15), e o  conteúdo da variável "i" somado com 4 (5+4 =9)
+Assim, as saídas serão: 4094, 7, 5, 15 e 9.

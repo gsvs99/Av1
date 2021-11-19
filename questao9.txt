@@ -1,0 +1,21 @@
+Questão 9)
+
+Primeira situação: ◦ x for declarado como char?
+
+Resposta: Acredito que nessa situação, para cada uma das somas com x será impresso algum tipo de caracter diferente do anterior.
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+Segunda situação: ◦ x for declarado como int?
+
+Resposta: para esse caso, será impresso um valor inteiro que corresponde ao endereço de memória que está sendo apontado. Como
+a questão definiu o endereço 4092 para x[0], as impressões seriam as seguintes:
+para x+1: 4094
+para x+1: 4096
+para x+1: 4098
+Já que cada int ocupa 2bytes. Mas imagino que possa ser na verdade de 4 em 4, o que resultaria em 4096, 4100 e 4104.
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+Terceira e quarta situação: ◦ x for declarado como float ou como double?
+
+Resposta: Acredito que o resultado para ambas a situações seja algum tipo de erro ou aviso, pois como esperamos um endereço de memória como resultado
+precisa ser um tipo inteiro.

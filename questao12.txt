@@ -1,0 +1,41 @@
+Segundo o Prof. Márcio Sarroglia Pinho, em seu endereço <https://www.inf.pucrs.br/~pinho/PRGSWB/PonteirosParaFuncoes/PonteirosParaFuncoes.html>, 
+o uso de ponteiro para funções é definido como:
+
+O uso de ponteiros para funções em C serve principalmente para definir, em tempo de execução, qual função será executada, sem a necessidade de escrever o nome 
+da função, de forma explícita naquele ponto do código. Em geral, a definição de qual função será executada é feita em um outro ponto do código, fazendo o ponteiro 
+apontar para a função desejada.
+
+Já seguno esse portal da unicamp: <https://www.dca.fee.unicamp.br/cursos/EA876/apostila/HTML/node144.html> Define-se:
+
+Ponteiros para funções podem ser passados como argumentos para outras funções, e a função apontada pode ser invocada a partir de seu ponteiro. 
+Um exemplo prático desta capacidade é seu uso em uma rotina de ordenação de elementos de um arranjo. Se o arranjo é de inteiros, então uma função de comparação 
+de inteiros deverá ser suportada.
+
+Exemplo de código utilizando esse recurso:
+
+#include <stdio.h>
+
+void inverter_inteiros(int *, int *);
+
+/* Função que vai receber os valores apontados por px e py e inverterá para qual endereço eles apontam, que resultará
+na inversão dos valores de entrada*/
+void inverter_inteiros(int *px, int *py){
+    int auxiliar;
+
+    auxiliar = *px;
+    *px = *py;
+    *py = auxiliar;
+}
+
+int main(void){
+    int a, b;
+
+    printf("Entre com dois numeros inteiros: ");
+    scanf("%d %d", &a, &b);
+
+    printf("Dados de entrada: %d e %d\n", a, b);    
+
+    inverter_inteiros(&a, &b);
+    
+    printf("Dados invertidos: %d e %d\n", a, b);
+}

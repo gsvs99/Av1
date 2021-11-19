@@ -1,0 +1,26 @@
+O numéro antes corresponde à posição das afirmações conforme está na lista.
+
+1) p = i;
+Resposta: Atribuição ilegal. Gera um alerta sobre o tipo que você está atribuindo a um ponteiro de inteiro já declarado.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4)i = (*&)j;
+Resposta: Atribuição ilegal. Gera um erro sobre o programa esperar algo após o & e antes de fechar o parêntese, pois acredito que ele precisa estar relacionado 
+a outro termo.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7) q = *p;
+Resposta: Atribuição ilegal. Gera um alerta do mesmo tipo da primeira afirmação, também uma atribuição ilegal.
+Observação: Nesse caso, testando o código, ele além de gerar esse alerta, retornava um valor negativo grande, que não soube interpretar, acredito na possibilidade de
+ser um lixo de memória, pois estava tentando atribuir a uma variável int o conteúdo de um ponteiro que eu ainda não tinha direcionado para um conteúdo de memória.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8) i = (*p)++ + *q;
+Resposta: Atribuição ilegal. Esse foi o mais complicado de interpretar, pois gerou um alerta de erro direto na tela do computador, que não consegui interpretar.
+Acredito que seja um problema semelhante aos das afirmações 7 e 1, algo relacionado à atribuição desses ponteiros.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Todas as demais afirmações considero verdadeiras, rodaram e retornaram resultados plausíveis. Não coloquei eles aqui pois a questão pedia especificamente que eu
+ dissesse quais atribuições eram ilegais.

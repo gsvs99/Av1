@@ -1,0 +1,55 @@
+/* (a) */
+Saída: 20 
+Comentário: em  *p1 = 20; valor recebeu esse inteiro e foi o valor impresso na tela.
+
+/* (b) */
+Saída: 29.0 
+Comentário: quando p2 recebe o float 29.0, atualiza o conteúdo da variável temp que ele aponta, que é o valor impresso na tela.
+
+/* (c) */
+Saída: P
+Comentário: Conforme esperado, pois a variável aux recebe o conteúdo pra onde o ponteiro está direcionado, que é o primeiro elemento do vetor char,"Ponteiros", a letra P.
+
+/* (d) */
+Saída: e
+Comentário: Semelhante à anterior, porém retornando o quinto elemento do vetor char, nesse caso a letra "e".
+
+/* (e) */
+Saída:P
+Comentário: Novamente o primeiro elemento, dessa vez porquê a variável que está sendo usada pra imprimir recebeu o vetor sem especificação de índice, e essa inteiração
+para o ponteiro é o mesmo que apontar para o primeiro elemento, o índice 0, nesse caos a letra "P".
+
+/* (f) */
+Saída:e
+Comentário: esse "e" foi impresso pois a soma do conteúdo de p3 com 4, é o mesmo que adcionar 4 ao índice e o elemento que ele aponta, pois em um vetor os elementos
+ocupam endereços de memória em sequência.
+
+/* (g) */
+Saída:t 
+Comentário: Mesmo raciocínio da anterior, porém pegando o valor dela e fazendo o decremente de 1 no índice, que corresponde à letra "t" no vetor char.
+
+/* (h) */
+Saída:31
+Comentário: Nesse bloco são atríbuidos inteiros para cada posição do vetor. O ponteiro de inteiros p4 recebe o vetor sem especificar o índice. Então, retorna o primeiro
+elemento, o inteiro 31.
+
+/* (i) */
+Saída: 45
+Comentário: Mesmo raciocínio da soma de inteiro com o ponteiro. Nesse caso houveo incremento de 1 no índice e retornou o próximo elemento, o inteiro 45.
+
+/* (j) */
+Saída: 27
+Comentário:Igual à anterior. Nesse caso houveo incremento de 1 no índice e retornou o próximo elemento, o inteiro 27.
+
+
+/* (l) */
+Saída: 31
+Comentário: Essa três últimas possuem o mesmo raciocínio de manipular o índice que quero retornar com a operação com os ponteiros.
+
+/* (m) */
+Saída: 45
+Comentário:
+
+/* (n) */
+Saída: 27
+Comentário:

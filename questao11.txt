@@ -1,0 +1,150 @@
+Questão 11)
+
+Primeira situação: aloha[2] = value;
+
+Resposta: Atribuição totalmente válida. Está fazendo o elemento do índice dois de um vetor float receber um valor float armazenado em value.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Segunda situação:scanf("%f", &aloha);
+
+Testei com esse código:
+#include <stdio.h>
+
+int main(){
+  
+    float aloha[10], coisas[10][5], *pf, value = 2.2;
+    int i=3;
+    scanf("%f", &aloha);
+
+    printf("%f", aloha);
+
+    return 0;
+}
+
+Saída: 3265716.002991 para uma entrada float = 2.1.
+
+Apesar de ter retornado um valor float, acredito ser uma atribuição inválida, pois assim como em outros casos, o endereço de memória tem que ser inteiro.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Terciera situação:aloha = value";
+
+Resposta: Atribuição inválida. Certamente retornará um erro relacionado a essa aspa após value.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Quarta situação:printf("%f", aloha);
+
+Resposta: Mais uma atribuição inválida. Em testes, sempre que executada, retornava valores negativos absurdos e diferentes do anterior.
+Código usado pra testar:
+#include <stdio.h>
+
+int main(){
+  
+    float aloha[10], coisas[10][5], *pf, value = 2.2;
+    int i=3;
+    
+    printf("%f", aloha);
+
+    return 0;
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Quinta situação:coisas[4][4] = aloha[3];
+
+Resposta: Atribuição provavelmente inválida. Código usado pra testar:
+#include <stdio.h>
+
+int main(){
+  
+    float aloha[10], coisas[10][5], *pf, value = 2.2;
+    int i=3;
+    coisas[4][4] = aloha[3];
+    printf("%f", aloha[3]);
+    printf("%f", coisas[4][4]);
+
+    return 0;
+}
+
+Ou seja, fiz a atribuição e tentei imprimir os elementos envolvidos nela e alterei o referenciador %f para outros para testar. Sempre retornava 0, mesmo
+usando outros referenciadores como %x na impressão.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Sexta situação:coisas[5] = aloha;
+
+Testei com o seguinte código:
+
+#include <stdio.h>
+
+int main(){
+  
+    float aloha[10], coisas[10][5], *pf, value = 2.2;
+    int i=3;
+    coisas[5] = aloha;
+    printf("%x\n", aloha);
+    printf("%x", coisas[5]);
+
+    return 0;
+}
+
+Saída: error: assignment to expression with array type
+    7 |     coisas[5] = aloha;
+      |               ^
+
+Resposta: Acredito que seja erro por tentar atribuir um elemento à matriz coisas sem a expressão adequada, que seria para linhas e colunas. Acredito que ainda com
+isso apresentaria algum tipo de erro, como na situação anterior.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Sétima situação: pf = value;
+
+Testado com:
+
+#include <stdio.h>
+
+int main(){
+  
+    float aloha[10], coisas[10][5], *pf, value = 2.2;
+    int i=3;
+    pf = value;
+    printf("%f", pf);
+
+    return 0;
+}
+
+Saída: error: incompatible types when assigning to type 'float *' from type 'float'
+    7 |     pf = value;
+      |          ^~~~~
+
+Testado com outros referenciadores também.
+
+Resposta: Novamente, atribuição inválida envolvendo ponteiro e tipos como float.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Oitava situação: pf = aloha;
+
+Nesse caso pf resultará no endereço usado pelo primeiro elemento de aloha.
+Teste:
+
+#include <stdio.h>
+
+int main(){
+  
+    float aloha[10], coisas[10][5], *pf, value = 2.2;
+    int i=3;
+    pf = aloha;
+    printf("%x", pf);
+
+    return 0;
+}
+
+Com esse referenciador %x ele retornou o endereço de aloha. Se tentar utilizar um tipo como float ele imprime valores inesperados, por se tratar de endereço de memória.
+
+
+
+

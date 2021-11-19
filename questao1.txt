@@ -1,0 +1,40 @@
+1) p == &i ?
+Resposta: Vemos que é uma afirmação Verdadeira logo de cara. Testei da seguinte maneira:
+     
+     if(p == &i){
+         printf("true");
+     }
+     else{printf("false");}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2) *p - *q?
+Resposta: O resultado será a subtração do conteúdo da variável "i" e da variável "j", que será igual -2. Testei assim:
+    
+    int resultado;
+
+    resultado = *p - *q;
+    printf("%d", resultado);
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3) **&p;?
+Resposta: O resultado será o conteúdo da variável "i". A explicação creio ser um ponteiro que aponta para o conteúdo de um ponteiro, que seria o conteúdo de "i".
+Testei assim:
+    
+    int resultado;
+
+    resultado = **&p;
+
+    printf("%d", resultado);
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4) 3 - *p/(*q) + 7; ?
+Resposta: O resultado é 10. Achei um pouco estranho o resultado, pois matematicamente deveria vir a precedência da divisão dos conteúdos dos ponteiros, que seria 3/5,
+assim o resultado seria outro. Mas achei 10 e testei da seguinte forma: 
+
+    int  resultado;
+    resultado = 3 - *p/(*q) + 7;
+    printf("%d", divisao);
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

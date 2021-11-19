@@ -1,0 +1,15 @@
+Questão 6)
+
+#include <stdio.h>
+
+int main(void){
+  int pulo[] = {0, 1, 2}, aux;
+  aux = pulo + 2;
+  printf("%d", aux);
+  
+}
+
+
+Utilizando o código acima e substituindo onde está especificamente o  pulo + 2 por todas as expressões da questão, cheguei a conclusão que *(pulo + 2);  é o único que aponta para o terceiro elemento,
+que nesse caso exemplifiquei como o inteiro 2. Os outros retornam ou endereço de memória ou outra informação que suspeito ser lixo de memória.
+

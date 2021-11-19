@@ -1,0 +1,81 @@
+Questão 10)
+
+Primeira situação:
+
+#include <stdio.h>
+
+int main(){
+  
+    char x[4], aux;
+    aux = x+1;
+    printf("%c", aux);
+
+    return 0;
+}
+Saída:  warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+    6 |     aux = x+1;
+      |         ^
+∟ (para x+1)
+↔ (para x+2)
+▲ (para x+3)
+
+Retorna um aviso e um Char.
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+Segunda situação: 
+
+#include <stdio.h>
+
+int main(){
+  
+    int x[4], aux;
+    aux = x+3;
+    printf("%d", aux);
+
+    return 0;
+}
+Saída: 6422296 (Endereço de memória de x[4], quando aux = x+3)
+       6422292 (Endereço de memória de x[4], quando aux = x+2)
+       6422288 (Endereço de memória de x[4], quando aux = x+1)
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Terceira situação: 
+
+#include <stdio.h>
+
+int main(){
+  
+    float x[4], aux;
+    aux = x+1;
+    printf("%f", aux);
+
+    return 0;
+}
+
+Saída:  error: incompatible types when assigning to type 'float' from type 'float *'
+    6 |     aux = x+1;
+      |           ^
+Como esperado, já que não dava pra operar o ponteiro com o tipo float, apenas inteiros.
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+Quarta situação:
+
+#include <stdio.h>
+
+int main(){
+  
+    double x[4], aux;
+    aux = x+1;
+    printf("%lf", aux);
+
+    return 0;
+}
+
+Saída: error: incompatible types when assigning to type 'double' from type 'double *'
+    6 |     aux = x+1;
+      |           ^
+
+Saída esperada, pois assim como o float, o double não daria pra usar pra operar nessa situação.

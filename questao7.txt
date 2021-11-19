@@ -1,0 +1,30 @@
+Questão 7
+
+Fiz o seguinte código para analisar as alternativas, substituindo onde tem "p = mat + 1;" por cada uma delas:
+#include <stdio.h>
+
+int main(){
+    int mat[4], *p, x;
+
+    p = mat + 1;
+
+    printf("%d", p);
+
+    return 0;
+}
+
+1) p = mat + 1;
+Saída: 6422288, o endereço de memória utilizando pelo 2 segundo elemento do vetor mat.
+Observação: na verdade, me parece ser lixo de memória, pois já notei esse mesmo valor aparecer em outros códigos.
+
+2) p = mat++;
+Saída: error: lvalue required as increment operand. 
+Ponteiros precisam de um valor como incremento.
+
+3)p = ++mat;
+Saída mesma situação da afirmação anterior. você precisar incrementar com um valor.
+
+4)x = (*mat)++;
+Saída: 4201008
+Nesse caso, primeiro foi definido o ponteiro para o primeiro elemento, o índice 0, e depois realizado um incremento de um e retornando
+o endereço do segundo elemento, índice 1.

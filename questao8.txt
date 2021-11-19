@@ -1,0 +1,31 @@
+Questão 8)
+
+Primeiro código:
+
+#include <stdio.h>
+
+int main(){
+  int vet[] = {4,9,13};
+  int i;
+  for(i=0;i<3;i++){
+  printf("%d ",*(vet+i));
+  }
+}
+
+Saída: 4 9 13, que corresponde aos elementos do vetor de inteiros vet, separados por espaço. Basicamente, o código pede pra imprimir
+o elemento seguinte a partir do primeiro, utilizando um loop for para incrementar e operar, pegando o conteúdo do endereço seguinte e imprimindo.
+
+
+Segundo código:
+
+#include <stdio.h>
+
+int main(){
+  int vet[] = {4,9,13};
+  int i;
+  for(i=0;i<3;i++){
+  printf("%X ",vet+i);
+  }
+}
+
+Saída: 61FF10 61FF14 61FF18, com raciocínio semelhante ao primeiro código, mas dessa vez retorna e imprime o endereço de memória ocupado por cada elemento do vetor(em hexadecimal).
